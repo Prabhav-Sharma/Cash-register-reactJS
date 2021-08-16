@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+
+:root {
+  margin-top: -22px;
+  background-color: #06b6d4;
+}
+
+.App {
+  font-family: "Noto Serif";
+  font-weight: bold;
+  text-align: center;
+  background-color: #06b6d4;
+  width: 30%;
+  margin: auto;
+  font-size: large;
+}
+
+input {
+  display: block;
+  margin: auto;
+  margin-top: 1.2rem;
+  border-radius: 10px;
+  padding: 2px;
+  text-align: center;
+  font-family: "Noto Serif";
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+button {
+  margin: auto;
+  margin-top: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px black;
+  font-family: "Noto Serif";
+  font-weight: bold;
+  font-size: 12pt;
+  padding: 6px;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  width: 350px;
+  text-align: center;
+  padding: 1px;
+  background-color: #cae1ff;
+}
+
+table {
+  margin: auto;
+  margin-top: 12px;
+  background-color: #cae1ff;
+}
+
+th {
+  background-color: #94c3ff;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 4px 4px 4px black;
+}

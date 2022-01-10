@@ -1,39 +1,40 @@
+//ES6 Version Code
 import { useState } from "react";
 import "./styles.css";
 
 export default function App() {
-  var [display, setDisplay] = useState("hidden");
-  var [notes2000, setNotes2000] = useState(0);
-  var [notes500, setNotes500] = useState(0);
-  var [notes100, setNotes100] = useState(0);
-  var [notes50, setNotes50] = useState(0);
-  var [notes10, setNotes10] = useState(0);
-  var [notes5, setNotes5] = useState(0);
-  var [notes1, setNotes1] = useState(0);
-  var [billAmount, setBillAmount] = useState(0);
-  var [cashAmount, setCashAmount] = useState(0);
-  var [buttonDisplay, setButtonDisplay] = useState("none");
-  var [tableDisplay, setTableDisplay] = useState("none");
-  var [balanceStat, setBalanceStat] = useState(0);
+  let [display, setDisplay] = useState("hidden");
+  let [notes2000, setNotes2000] = useState(0);
+  let [notes500, setNotes500] = useState(0);
+  let [notes100, setNotes100] = useState(0);
+  let [notes50, setNotes50] = useState(0);
+  let [notes10, setNotes10] = useState(0);
+  let [notes5, setNotes5] = useState(0);
+  let [notes1, setNotes1] = useState(0);
+  let [billAmount, setBillAmount] = useState(0);
+  let [cashAmount, setCashAmount] = useState(0);
+  let [buttonDisplay, setButtonDisplay] = useState("none");
+  let [tableDisplay, setTableDisplay] = useState("none");
+  let [balanceStat, setBalanceStat] = useState(0);
 
-  function billAmountFn(event) {
+  const billAmountFn = (event) => {
     setBillAmount(event.target.value);
     setDisplay("number");
-  }
+  };
 
-  function cashAmountFn(event) {
+  const cashAmountFn = (event) => {
     setCashAmount(event.target.value);
     setButtonDisplay("block");
-  }
-  function noteCalc(output, amount, currency) {
-    var notes = Math.floor(amount / currency);
+  };
+  const noteCalc = (output, amount, currency) => {
+    let notes = Math.floor(amount / currency);
     output(notes);
     return amount - notes * currency;
-  }
+  };
 
-  function divideCash() {
+  const divideCash = () => {
     setTableDisplay("block");
-    var returnAmount = cashAmount - billAmount;
+    let returnAmount = cashAmount - billAmount;
 
     setBalanceStat(returnAmount);
 
@@ -62,7 +63,7 @@ export default function App() {
       ),
       1
     );
-  }
+  };
   return (
     <div className="App">
       <h1>Cash Register 🧾</h1>

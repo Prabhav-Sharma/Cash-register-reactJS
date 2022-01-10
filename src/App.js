@@ -32,7 +32,7 @@ export default function App() {
     return amount - notes * currency;
   };
 
-  const divideCash = () => {
+  const divideCash = (_) => {
     setTableDisplay("block");
     let returnAmount = cashAmount - billAmount;
 
